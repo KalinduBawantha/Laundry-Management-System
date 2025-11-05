@@ -10,7 +10,7 @@ import OrderDelivery from "./pages/OrderDelivery";
 import ItemPriceRegistration from "./pages/ItemPriceRegistration";
 //import ManageItems from "./pages/ManageItems";
 
-
+// 
 function App() {
   
   return (
