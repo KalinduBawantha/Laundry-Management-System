@@ -7,24 +7,41 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const res = await axios.post("http://localhost:5001/login", { username, password });
+  //     if (res.data.success) {
+  //       alert(res.data.message);
+  //       navigate("/Dashboard");
+  //     } else {
+  //       alert(res.data.message);
+  //     }
+  //   } catch (err) {
+  //     if (err.response && err.response.data.message) {
+  //       alert(err.response.data.message);
+  //     } else {
+  //       alert("Server error. Try again later.");
+  //     }
+  //   }
+  // };
+
   const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5001/login", { username, password });
-      if (res.data.success) {
-        alert(res.data.message);
-        navigate("/Mainpage");
-      } else {
-        alert(res.data.message);
-      }
-    } catch (err) {
-      if (err.response && err.response.data.message) {
-        alert(err.response.data.message);
-      } else {
-        alert("Server error. Try again later.");
-      }
-    }
-  };
+  e.preventDefault();
+  try {
+    // Temporarily skip backend validation
+    // const res = await axios.post("http://localhost:5001/login", { username, password });
+
+    // Always successful
+    alert("Login successful! Redirecting to Dashboard...");
+    navigate("/Dashboard");
+
+  } catch (err) {
+    alert("Something went wrong, but still redirecting for testing...");
+    navigate("/Dashboard");
+  }
+};
+
 
   return (
     <div
